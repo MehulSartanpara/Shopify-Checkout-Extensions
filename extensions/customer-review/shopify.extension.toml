@@ -1,0 +1,154 @@
+# Learn more about configuring your checkout UI extension:
+# https://shopify.dev/api/checkout-extensions/checkout/configuration
+
+# The version of APIs your extension will receive. Learn more:
+# https://shopify.dev/docs/api/usage/versioning
+api_version = "unstable"
+
+[[extensions]]
+type = "ui_extension"
+name = "Customer Review"
+handle = "customer-review"
+
+# Controls where in Shopify your extension will be injected,
+# and the file that contains your extension’s source code. Learn more:
+# https://shopify.dev/docs/api/checkout-ui-extensions/unstable/extension-targets-overview
+
+[[extensions.targeting]]
+module = "./src/Checkout.jsx"
+target = "purchase.checkout.footer.render-after"
+
+[extensions.capabilities]
+# Gives your extension access to directly query Shopify’s storefront API.
+# https://shopify.dev/docs/api/checkout-ui-extensions/unstable/configuration#api-access
+api_access = true
+
+# Gives your extension access to make external network calls, using the
+# JavaScript `fetch()` API. Learn more:
+# https://shopify.dev/docs/api/checkout-ui-extensions/unstable/configuration#network-access
+# network_access = true
+
+# Loads metafields on checkout resources, including the cart,
+# products, customers, and more. Learn more:
+# https://shopify.dev/docs/api/checkout-ui-extensions/unstable/configuration#metafields
+
+# [[extensions.metafields]]
+# namespace = "my_namespace"
+# key = "my_key"
+# [[extensions.metafields]]
+# namespace = "my_namespace"
+# key = "my_other_key"
+
+# Defines settings that will be collected from merchants installing
+# your extension. Learn more:
+# https://shopify.dev/docs/api/checkout-ui-extensions/unstable/configuration#settings-definition
+
+[extensions.settings]
+
+[[extensions.settings.fields]]
+key = "reviewer_img_1"
+type = "single_line_text_field"
+name = "Reviewer Image 1"
+description = "Enter a reviewer image 1 url"
+
+[[extensions.settings.fields]]
+key = "reviewer_name_1"
+type = "single_line_text_field"
+name = "Reviewer Name 1"
+description = "Enter a reviewer 1 name"
+
+[[extensions.settings.fields]]
+key = "reviewer_subtitle_1"
+type = "single_line_text_field"
+name = "Reviewer Subtitle 1"
+description = "Enter a reviewer 1 subtitle"
+
+[[extensions.settings.fields]]
+key = "review_title_1"
+type = "single_line_text_field"
+name = "Review Title 1"
+description = "Enter a review 1 title"
+
+[[extensions.settings.fields]]
+key = "review_star_img_1"
+type = "single_line_text_field"
+name = "Review Start Image 1"
+description = "Enter a review star image 1 url"
+
+[[extensions.settings.fields]]
+key = "review_description_1"
+type = "multi_line_text_field"
+name = "Review Description 1"
+description = "Enter a review 1 description"
+
+[[extensions.settings.fields]]
+key = "reviewer_img_2"
+type = "single_line_text_field"
+name = "Reviewer Image 2"
+description = "Enter a reviewer image 2 url"
+
+[[extensions.settings.fields]]
+key = "reviewer_name_2"
+type = "single_line_text_field"
+name = "Reviewer Name 2"
+description = "Enter a reviewer 2 name"
+
+[[extensions.settings.fields]]
+key = "reviewer_subtitle_2"
+type = "single_line_text_field"
+name = "Reviewer Subtitle 2"
+description = "Enter a reviewer 2 subtitle"
+
+[[extensions.settings.fields]]
+key = "review_title_2"
+type = "single_line_text_field"
+name = "Review Title 2"
+description = "Enter a review 2 title"
+
+[[extensions.settings.fields]]
+key = "review_star_img_2"
+type = "single_line_text_field"
+name = "Review Start Image 2"
+description = "Enter a review star image 2 url"
+
+[[extensions.settings.fields]]
+key = "review_description_2"
+type = "multi_line_text_field"
+name = "Review Description 2"
+description = "Enter a review 2 description"
+
+[[extensions.settings.fields]]
+key = "reviewer_img_3"
+type = "single_line_text_field"
+name = "Reviewer Image 3"
+description = "Enter a reviewer image 3 url"
+
+[[extensions.settings.fields]]
+key = "reviewer_name_3"
+type = "single_line_text_field"
+name = "Reviewer Name 3"
+description = "Enter a reviewer 3 name"
+
+[[extensions.settings.fields]]
+key = "reviewer_subtitle_3"
+type = "single_line_text_field"
+name = "Reviewer Subtitle 3"
+description = "Enter a reviewer 3 subtitle"
+
+[[extensions.settings.fields]]
+key = "review_title_3"
+type = "single_line_text_field"
+name = "Review Title 3"
+description = "Enter a review 3 title"
+
+[[extensions.settings.fields]]
+key = "review_star_img_3"
+type = "single_line_text_field"
+name = "Review Start Image 3"
+description = "Enter a review star image 3 url"
+
+[[extensions.settings.fields]]
+key = "review_description_3"
+type = "multi_line_text_field"
+name = "Review Description 3"
+description = "Enter a review 3 description"

@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "extensions"
+client_id = "86797ff3b7d4c493cb22dae42bad329f"
+application_url = "https://differently-striking-lynn-drinks.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = ""
+
+[auth]
+redirect_urls = [
+  "https://differently-striking-lynn-drinks.trycloudflare.com/auth/callback",
+  "https://differently-striking-lynn-drinks.trycloudflare.com/auth/shopify/callback",
+  "https://differently-striking-lynn-drinks.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "mehul-checkout-extensions.myshopify.com"
