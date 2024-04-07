@@ -19556,14 +19556,14 @@ ${errorInfo.componentStack}`);
     } = useSettings();
     return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(import_jsx_runtime4.Fragment, { children: [
       reviewer_img_1 && reviewer_name_1 && review_title_1 && review_star_img_1 && review_description_1 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(import_jsx_runtime4.Fragment, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(InlineLayout2, { columns: [80, "fill"], padding: "loose", border: "base", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(InlineLayout2, { columns: [80, "fill"], padding: "loose", border: "base", cornerRadius: "large", children: [
           /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(View2, { children: [
-            reviewer_img_1 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "extraTight", "none"], children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Image2, { source: reviewer_img_1, cornerRadius: "fullyRounded", fit: "cover", aspectRatio: "1/1" }) }) : "",
-            reviewer_name_1 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "extraTight", "none"], inlineAlignment: "center", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { appearance: "subdued", emphasis: "bold", children: reviewer_name_1 }) }) : "",
-            reviewer_subtitle_1 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { inlineAlignment: "center", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { appearance: "subdued", children: reviewer_subtitle_1 }) }) : ""
+            reviewer_img_1 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "extraTight", "none"], children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Image2, { source: reviewer_img_1, cornerRadius: "large", fit: "cover", aspectRatio: "1/1" }) }) : "",
+            reviewer_name_1 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "none", "none"], inlineAlignment: "center", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { appearance: "base", size: "base", emphasis: "bold", children: reviewer_name_1 }) }) : "",
+            reviewer_subtitle_1 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { inlineAlignment: "center", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { appearance: "subdued", size: "small", children: reviewer_subtitle_1 }) }) : ""
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(View2, { padding: ["none", "none", "none", "base"], children: [
-            review_title_1 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "tight", "none"], children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { appearance: "decorative", size: "large", children: review_title_1 }) }) : "",
+            review_title_1 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "extraTight", "none"], children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { appearance: "base", size: "large", emphasis: "bold", children: review_title_1 }) }) : "",
             review_star_img_1 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "base", "none"], children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Image2, { source: review_star_img_1, fit: "cover" }) }) : "",
             review_description_1 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(TextBlock2, { appearance: "subdued", size: "medium", children: review_description_1 }) }) : ""
           ] })
@@ -19571,14 +19571,14 @@ ${errorInfo.componentStack}`);
         /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: "base" })
       ] }) : "",
       reviewer_img_2 && reviewer_name_2 && review_title_2 && review_star_img_2 && review_description_2 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(import_jsx_runtime4.Fragment, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(InlineLayout2, { columns: [80, "fill"], padding: "loose", border: "base", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(InlineLayout2, { columns: [80, "fill"], padding: "loose", border: "base", cornerRadius: "large", children: [
           /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(View2, { children: [
-            reviewer_img_2 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "extraTight", "none"], children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Image2, { source: reviewer_img_2, cornerRadius: "fullyRounded", fit: "cover", aspectRatio: "1/1" }) }) : "",
-            reviewer_name_2 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "extraTight", "none"], inlineAlignment: "center", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { appearance: "subdued", emphasis: "bold", children: reviewer_name_2 }) }) : "",
-            reviewer_subtitle_2 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { inlineAlignment: "center", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { appearance: "subdued", children: reviewer_subtitle_2 }) }) : ""
+            reviewer_img_2 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "extraTight", "none"], children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Image2, { source: reviewer_img_2, cornerRadius: "large", fit: "cover", aspectRatio: "1/1" }) }) : "",
+            reviewer_name_2 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "none", "none"], inlineAlignment: "center", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { appearance: "base", size: "base", emphasis: "bold", children: reviewer_name_2 }) }) : "",
+            reviewer_subtitle_2 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { inlineAlignment: "center", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { appearance: "subdued", size: "small", children: reviewer_subtitle_2 }) }) : ""
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(View2, { padding: ["none", "none", "none", "base"], children: [
-            review_title_2 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "tight", "none"], children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { appearance: "decorative", size: "large", children: review_title_2 }) }) : "",
+            review_title_2 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "tight", "none"], children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { appearance: "base", size: "large", emphasis: "bold", children: review_title_2 }) }) : "",
             review_star_img_2 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "base", "none"], children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Image2, { source: review_star_img_2, fit: "cover" }) }) : "",
             review_description_2 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(TextBlock2, { appearance: "subdued", size: "medium", children: review_description_2 }) }) : ""
           ] })
@@ -19586,14 +19586,14 @@ ${errorInfo.componentStack}`);
         /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: "base" })
       ] }) : "",
       reviewer_img_3 && reviewer_name_3 && review_title_3 && review_star_img_3 && review_description_3 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(import_jsx_runtime4.Fragment, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(InlineLayout2, { columns: [80, "fill"], padding: "loose", border: "base", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(InlineLayout2, { columns: [80, "fill"], padding: "loose", border: "base", cornerRadius: "large", children: [
           /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(View2, { children: [
-            reviewer_img_3 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "extraTight", "none"], children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Image2, { source: reviewer_img_3, cornerRadius: "fullyRounded", fit: "cover", aspectRatio: "1/1" }) }) : "",
-            reviewer_name_3 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "extraTight", "none"], inlineAlignment: "center", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { appearance: "subdued", emphasis: "bold", children: reviewer_name_3 }) }) : "",
-            reviewer_subtitle_3 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { inlineAlignment: "center", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { appearance: "subdued", children: reviewer_subtitle_3 }) }) : ""
+            reviewer_img_3 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "extraTight", "none"], children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Image2, { source: reviewer_img_3, cornerRadius: "large", fit: "cover", aspectRatio: "1/1" }) }) : "",
+            reviewer_name_3 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "none", "none"], inlineAlignment: "center", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { appearance: "base", size: "base", emphasis: "bold", children: reviewer_name_3 }) }) : "",
+            reviewer_subtitle_3 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { inlineAlignment: "center", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { appearance: "subdued", size: "small", children: reviewer_subtitle_3 }) }) : ""
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(View2, { padding: ["none", "none", "none", "base"], children: [
-            review_title_3 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "tight", "none"], children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { appearance: "decorative", size: "large", children: review_title_3 }) }) : "",
+            review_title_3 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "tight", "none"], children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { appearance: "base", size: "large", emphasis: "bold", children: review_title_3 }) }) : "",
             review_star_img_3 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { padding: ["none", "none", "base", "none"], children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Image2, { source: review_star_img_3, fit: "cover" }) }) : "",
             review_description_3 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(TextBlock2, { appearance: "subdued", size: "medium", children: review_description_3 }) }) : ""
           ] })
