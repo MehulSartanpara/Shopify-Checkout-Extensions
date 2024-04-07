@@ -2495,7 +2495,7 @@
           var HostPortal = 4;
           var HostComponent = 5;
           var HostText = 6;
-          var Fragment = 7;
+          var Fragment2 = 7;
           var Mode = 8;
           var ContextConsumer = 9;
           var ContextProvider = 10;
@@ -2635,7 +2635,7 @@
                 return "DehydratedFragment";
               case ForwardRef:
                 return getWrappedName$1(type, type.render, "ForwardRef");
-              case Fragment:
+              case Fragment2:
                 return "Fragment";
               case HostComponent:
                 return type;
@@ -7053,7 +7053,7 @@
               }
             }
             function updateFragment2(returnFiber, current2, fragment, lanes, key) {
-              if (current2 === null || current2.tag !== Fragment) {
+              if (current2 === null || current2.tag !== Fragment2) {
                 var created = createFiberFromFragment(fragment, returnFiber.mode, lanes, key);
                 created.return = returnFiber;
                 return created;
@@ -7456,7 +7456,7 @@
                 if (child.key === key) {
                   var elementType = element.type;
                   if (elementType === REACT_FRAGMENT_TYPE) {
-                    if (child.tag === Fragment) {
+                    if (child.tag === Fragment2) {
                       deleteRemainingChildren(returnFiber, child.sibling);
                       var existing = useFiber(child, element.props.children);
                       existing.return = returnFiber;
@@ -11633,7 +11633,7 @@
                 var _resolvedProps2 = workInProgress2.elementType === type ? _unresolvedProps2 : resolveDefaultProps(type, _unresolvedProps2);
                 return updateForwardRef(current2, workInProgress2, type, _resolvedProps2, renderLanes2);
               }
-              case Fragment:
+              case Fragment2:
                 return updateFragment(current2, workInProgress2, renderLanes2);
               case Mode:
                 return updateMode(current2, workInProgress2, renderLanes2);
@@ -12074,7 +12074,7 @@
               case SimpleMemoComponent:
               case FunctionComponent:
               case ForwardRef:
-              case Fragment:
+              case Fragment2:
               case Mode:
               case Profiler:
               case ContextConsumer:
@@ -16840,7 +16840,7 @@
             return fiber;
           }
           function createFiberFromFragment(elements, mode, lanes, key) {
-            var fiber = createFiber(Fragment, elements, key, mode);
+            var fiber = createFiber(Fragment2, elements, key, mode);
             fiber.lanes = lanes;
             return fiber;
           }
@@ -19127,6 +19127,12 @@
   // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/InlineLayout/InlineLayout.mjs
   var InlineLayout = createRemoteComponent("InlineLayout");
 
+  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/SkeletonImage/SkeletonImage.mjs
+  var SkeletonImage = createRemoteComponent("SkeletonImage");
+
+  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/SkeletonText/SkeletonText.mjs
+  var SkeletonText = createRemoteComponent("SkeletonText");
+
   // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/TextBlock/TextBlock.mjs
   var TextBlock = createRemoteComponent("TextBlock");
 
@@ -19467,6 +19473,12 @@ ${errorInfo.componentStack}`);
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/InlineLayout/InlineLayout.mjs
   var InlineLayout2 = createRemoteReactComponent(InlineLayout);
 
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/SkeletonImage/SkeletonImage.mjs
+  var SkeletonImage2 = createRemoteReactComponent(SkeletonImage);
+
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/SkeletonText/SkeletonText.mjs
+  var SkeletonText2 = createRemoteReactComponent(SkeletonText);
+
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/TextBlock/TextBlock.mjs
   var TextBlock2 = createRemoteReactComponent(TextBlock);
 
@@ -19474,7 +19486,7 @@ ${errorInfo.componentStack}`);
   var View2 = createRemoteReactComponent(View);
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/api.mjs
-  var import_react12 = __toESM(require_react(), 1);
+  var import_react14 = __toESM(require_react(), 1);
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/errors.mjs
   var CheckoutUIExtensionError = class extends Error {
@@ -19486,7 +19498,7 @@ ${errorInfo.componentStack}`);
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/api.mjs
   function useApi(_target) {
-    const api = (0, import_react12.useContext)(ExtensionApiContext);
+    const api = (0, import_react14.useContext)(ExtensionApiContext);
     if (api == null) {
       throw new CheckoutUIExtensionError("You can only call this hook when running as a UI extension.");
     }
@@ -19494,10 +19506,10 @@ ${errorInfo.componentStack}`);
   }
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/subscription.mjs
-  var import_react13 = __toESM(require_react(), 1);
+  var import_react15 = __toESM(require_react(), 1);
   function useSubscription(subscription) {
-    const [, setValue] = (0, import_react13.useState)(subscription.current);
-    (0, import_react13.useEffect)(() => {
+    const [, setValue] = (0, import_react15.useState)(subscription.current);
+    (0, import_react15.useEffect)(() => {
       let didUnsubscribe = false;
       const checkForUpdates = (newValue) => {
         if (didUnsubscribe) {
@@ -19528,19 +19540,28 @@ ${errorInfo.componentStack}`);
     () => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Extension, {})
   );
   function Extension() {
-    const { image_one, title_one, image_two, title_two, image_three, title_three, title_color } = useSettings();
-    return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(InlineLayout2, { columns: ["33.33%", "33.33%", "33.33%"], children: [
+    const { image_one, title_one, image_two, title_two, image_three, title_three, image_width, title_size, title_color, title_emphasis } = useSettings();
+    return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(InlineLayout2, { columns: ["33.33%", "33.33%", "33.33%"], inlineAlignment: "center", children: [
       /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(View2, { padding: ["none", "tight", "none", "tight"], inlineAlignment: "center", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(InlineLayout2, { padding: ["base", "none"], columns: [90], children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Image2, { aspectRatio: " 1 / 1", source: `${image_one ? image_one : "https://cdn.shopify.com/s/files/1/0255/3249/8001/t/119/assets/New-Free-Shipping-with-Every-Order.png?v=140641777467727778021677214252"}`, fit: "contain" }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(TextBlock2, { inlineAlignment: "center", appearance: `${title_color ? title_color : "accent"}`, size: "base", children: title_one ? title_one : "Free Shipping with Every Order" })
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(InlineLayout2, { padding: ["base", "none"], columns: image_width ? image_width : 90, children: image_one ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Image2, { aspectRatio: " 1 / 1", source: `${image_one ? image_one : ""}`, fit: "contain" }) : /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(SkeletonImage2, { aspectRatio: "1" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(TextBlock2, { inlineAlignment: "center", appearance: `${title_color ? title_color : "info"}`, size: title_size ? title_size : "base", emphasis: title_emphasis ? title_emphasis : "bold", children: title_one ? title_one ? title_one : "" : /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(import_jsx_runtime4.Fragment, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(SkeletonText2, { size: "small", inlineSize: "base" }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(SkeletonText2, { size: "extraSmall", inlineSize: "base" })
+        ] }) })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(View2, { padding: ["none", "base", "none", "base"], inlineAlignment: "center", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(InlineLayout2, { padding: ["base", "none"], columns: image_width ? image_width : 90, children: image_two ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Image2, { aspectRatio: " 1 / 1", source: `${image_two ? image_two : ""}`, fit: "contain" }) : /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(SkeletonImage2, { aspectRatio: "1" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(TextBlock2, { inlineAlignment: "center", appearance: `${title_color ? title_color : "info"}`, size: title_size ? title_size : "base", emphasis: title_emphasis ? title_emphasis : "bold", children: title_two ? title_two ? title_two : "" : /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(import_jsx_runtime4.Fragment, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(SkeletonText2, { size: "small", inlineSize: "base" }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(SkeletonText2, { size: "extraSmall", inlineSize: "base" })
+        ] }) })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(View2, { padding: ["none", "tight", "none", "tight"], inlineAlignment: "center", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(InlineLayout2, { padding: ["base", "none"], columns: [90], children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Image2, { aspectRatio: " 1 / 1", source: `${image_two ? image_two : "https://cdn.shopify.com/s/files/1/0255/3249/8001/t/119/assets/Delivered-Fresh-Monthly.png?v=170065621086856978431677136042"}`, fit: "contain" }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(TextBlock2, { inlineAlignment: "center", appearance: `${title_color ? title_color : "accent"}`, size: "base", children: title_two ? title_two : "Delivered Fresh Monthly" })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(View2, { padding: ["none", "tight", "none", "tight"], inlineAlignment: "center", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(InlineLayout2, { padding: ["base", "none"], columns: [90], children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Image2, { aspectRatio: " 1 / 1", source: `${image_three ? image_three : "https://cdn.shopify.com/s/files/1/0255/3249/8001/t/119/assets/New-Manufactured-in-the-USA.png?v=122724203750252202591677214272"}`, fit: "contain" }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(TextBlock2, { inlineAlignment: "center", appearance: `${title_color ? title_color : "accent"}`, size: "base", children: title_three ? title_three : "Manufactured in the USA" })
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(InlineLayout2, { padding: ["base", "none"], columns: image_width ? image_width : 90, children: image_three ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Image2, { aspectRatio: " 1 / 1", source: `${image_three ? image_three : ""}`, fit: "contain" }) : /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(SkeletonImage2, { aspectRatio: "1" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(TextBlock2, { inlineAlignment: "center", appearance: `${title_color ? title_color : "info"}`, size: title_size ? title_size : "base", emphasis: title_emphasis ? title_emphasis : "bold", children: title_three ? title_three ? title_three : "" : /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(import_jsx_runtime4.Fragment, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(SkeletonText2, { size: "small", inlineSize: "base" }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(SkeletonText2, { size: "extraSmall", inlineSize: "base" })
+        ] }) })
       ] })
     ] });
   }
